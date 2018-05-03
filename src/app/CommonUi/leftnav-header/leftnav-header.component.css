@@ -1,0 +1,19 @@
+.example-container {
+    position: absolute;
+    top: 60px;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+  }
+  
+  .example-sidenav {
+    display: block;
+    align-items: top;
+    justify-content: center;
+    width: 200px;
+  }
+  .logo{
+    padding: 10px !important;
+    position: relative;
+    margin: 2px;
+  }

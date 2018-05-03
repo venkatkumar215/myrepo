@@ -1,0 +1,29 @@
+
+<mat-toolbar color="accent">
+  <mat-icon (click)="sidenav.toggle()">reorder</mat-icon>
+   <div class="log"> LEts PLay
+   </div>
+<app-dropdown></app-dropdown>
+   <div>
+
+   </div>
+</mat-toolbar>
+
+<mat-sidenav-container class="example-container">
+ <mat-sidenav #sidenav mode="side" opened="true" class="example-sidenav">
+  <mat-list>
+    <mat-list-item>
+      <a   [routerLink]="['Home/tournament']" >tournament</a>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>Item 2</mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>Item 3</mat-list-item>
+  </mat-list>
+   
+
+   </mat-sidenav>
+
+<router-outlet></router-outlet>
+</mat-sidenav-container>
+
