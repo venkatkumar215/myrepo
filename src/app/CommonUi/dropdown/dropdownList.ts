@@ -1,4 +1,4 @@
 export class dropdownList{
     id ?:string;
-    name ?:string
+    name ?:string;
 }

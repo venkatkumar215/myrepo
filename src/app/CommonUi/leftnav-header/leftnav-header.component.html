@@ -1,29 +1,38 @@
-
 <mat-toolbar color="accent">
   <mat-icon (click)="sidenav.toggle()">reorder</mat-icon>
-   <div class="log"> LEts PLay
-   </div>
-<app-dropdown></app-dropdown>
-   <div>
+  <div class="log"> LEts PLay
+  </div>
+  <app-dropdown  [placeholder]=message></app-dropdown>
+  <div>
 
-   </div>
+  </div>
 </mat-toolbar>
 
-<mat-sidenav-container class="example-container">
- <mat-sidenav #sidenav mode="side" opened="true" class="example-sidenav">
-  <mat-list>
-    <mat-list-item>
-      <a   [routerLink]="['Home/tournament']" >tournament</a>
-    </mat-list-item>
-    <mat-divider></mat-divider>
-    <mat-list-item>Item 2</mat-list-item>
-    <mat-divider></mat-divider>
-    <mat-list-item>Item 3</mat-list-item>
-  </mat-list>
-   
+<mat-sidenav-container class="example-container" autosize>
+  <mat-sidenav #sidenav mode="side" opened="true" class="example-sidenav">
+    <mat-list>
+      <mat-list-item>
 
-   </mat-sidenav>
+        <a [routerLink]="['MainHomePage']">
 
-<router-outlet></router-outlet>
+            <i class="material-icons">home</i>
+
+        </a>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <a [routerLink]="['tournament']">
+            <i class="fa fa-trophy fa-2x" aria-hidden="true"></i>
+        </a>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>Item 2</mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>Item 3</mat-list-item>
+    </mat-list>
+
+
+  </mat-sidenav>
+
+  <router-outlet></router-outlet>
 </mat-sidenav-container>
-

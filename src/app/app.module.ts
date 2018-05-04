@@ -16,9 +16,7 @@ import { DropdownComponent } from './CommonUi/dropdown/dropdown.component';
 import { HomePageService } from './Homepage/homepage/home-page.service';
 import { TournmentComponent } from './tournment/tournment.component';
 import { LeftnavHeaderComponent } from './CommonUi/leftnav-header/leftnav-header.component';
-
-
-
+import { MainhomepageComponent } from './Homepage/mainhomepage/mainhomepage.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +24,8 @@ import { LeftnavHeaderComponent } from './CommonUi/leftnav-header/leftnav-header
     HomepageComponent,
     DropdownComponent,
     TournmentComponent,
-    LeftnavHeaderComponent
+    LeftnavHeaderComponent,
+    MainhomepageComponent
   ],
   imports: [
     BrowserModule,

@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./leftnav-header.component.css']
 })
 export class LeftnavHeaderComponent implements OnInit {
-
-  constructor() { }
+public message:any;
+  constructor() {
+   
+   }
 
   ngOnInit() {
   }
