@@ -1,43 +1,34 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import {HttpClientModule} from '@angular/common/http';
-import { SwiperModule } from 'angular2-useful-swiper';
+import { ErrorHandler, NgModule } from '@angular/core';
+import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { SplashScreen } from '@ionic-native/splash-screen';
+import { StatusBar } from '@ionic-native/status-bar';
 
-
-import { AppComponent } from './app.component';
-import { HomepageComponent } from './Homepage/homepage/homepage.component';
-import { AppRoutingModule } from './/app-routing.module';
-import{ CoreModule} from './core/core.module';
-import { SharedModule} from './shared/shared.module';
-import { FormsModule,ReactiveFormsModule } from '@angular/forms';
-import { DropdownComponent } from './CommonUi/dropdown/dropdown.component';
-import { HomePageService } from './Homepage/homepage/home-page.service';
-import { TournmentComponent } from './tournment/tournment.component';
-import { LeftnavHeaderComponent } from './CommonUi/leftnav-header/leftnav-header.component';
-import { MainhomepageComponent } from './Homepage/mainhomepage/mainhomepage.component';
+import { MyApp } from './app.component';
+//import { HomePage } from '../pages/home/home';
+//import { LoginPage } from '../pages/login/login';
+//import {MenuPage} from '../pages/menu/menu';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HomepageComponent,
-    DropdownComponent,
-    TournmentComponent,
-    LeftnavHeaderComponent,
-    MainhomepageComponent
+    MyApp,
+    // HomePage,
+    // LoginPage,
+    // MenuPage
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    CoreModule,
-    SharedModule,
-    ReactiveFormsModule,
-    HttpClientModule,BrowserAnimationsModule,
-    SwiperModule,
-    NgbModule.forRoot()
+    IonicModule.forRoot(MyApp)
   ],
-  providers: [HomePageService],
-  bootstrap: [AppComponent]
+  bootstrap: [IonicApp],
+  entryComponents: [
+    MyApp,
+    //HomePage
+  ],
+  providers: [
+    StatusBar,
+    SplashScreen,
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
+  ]
 })
-export class AppModule { }
+export class AppModule {}
