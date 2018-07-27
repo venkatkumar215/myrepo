@@ -39,7 +39,7 @@ export class MenuPage {
 
   openPage(pages:PageInterface){
 
-    this.navCtrl.setRoot(pages.pageName)
+    this.navCtrl.push(pages.pageName)
 
   }
   isActive(){
